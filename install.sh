@@ -2,8 +2,9 @@
 
 # packages
 apps="git tmux podman keepassxc"
+c="clang clangd clang-format bear gdb"
 utils="ripgrep fd-find curl wget jq build-essential"
-sudo apt-get install -y $apps $utils
+sudo apt-get install -y $apps $c $utils
 
 # dotfiles
 mkdir -p ~/.config/nvim && cp init.lua ~/.config/nvim
