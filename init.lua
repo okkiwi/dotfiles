@@ -95,6 +95,7 @@ cmp.setup.cmdline(":", {
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- lsp
+require("lspconfig")["clangd"].setup({ capabilities = capabilities })
 require("lspconfig")["cssls"].setup({ capabilities = capabilities })
 require("lspconfig")["html"].setup({ capabilities = capabilities })
 require("lspconfig")["ts_ls"].setup({ capabilities = capabilities })
