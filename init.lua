@@ -78,7 +78,8 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
 		{ name = "path" },
-	}, { { name = "buffer" } }),
+		{ name = "buffer" },
+	}),
 })
 
 cmp.setup.cmdline({ "/", "?" }, {
@@ -88,7 +89,10 @@ cmp.setup.cmdline({ "/", "?" }, {
 
 cmp.setup.cmdline(":", {
 	mapping = cmp.mapping.preset.cmdline(),
-	sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
+	sources = cmp.config.sources({
+		{ name = "path" },
+		{ name = "cmdline" },
+	}),
 	matching = { disallow_symbol_nonprefix_matching = false },
 })
 
